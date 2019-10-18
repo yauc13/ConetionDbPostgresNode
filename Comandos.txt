@@ -1,0 +1,27 @@
+npm init --yes
+
+npm install pg
+
+npm i express
+i nodemon -D
+npm i @types/node
+npm install @types/express
+npm i morgan
+tsc --init
+tsc
+----//---
+cuando se ejecuta el comando tsc se crea un archivo tsconfig.json
+hacer los siguientes cambios:
+"target": "es6" (antes estaba "es5")
+ "outDir": "./build" (descomentar y agregar la ruta build)
+---//---
+al ejecutar init --yes se crea el archivo package.json
+en la parte es scripts agregar :
+"scripts": {
+    "build": "tsc -w",
+    "dev": "nodemon build/index.js"
+  }
+----//---
+
+npm run build
+npm run dev
